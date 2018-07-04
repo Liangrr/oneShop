@@ -13,6 +13,9 @@ body{
 .loginbar>a{
 	margin-left: 20px;
 }
+.loginbar a:hover{
+	color: #fe5656;
+}
 .loginbar .hd_unlogin{
 	float: right;
 }
@@ -65,6 +68,7 @@ body{
 	width: 50px;
 	height: 40px;
 	background-color: #FE5656;
+	cursor: pointer;
 	border: none;
 	float: left;
 }
@@ -112,6 +116,7 @@ body{
 
 .nav{
 	height: 400px;
+	overflow: hidden;
 	background-color: yellowgreen;
 }
 .nav_sidebar{
@@ -121,12 +126,131 @@ body{
 	color: white;
 	background-color: #434343;
 }
+.nav_sidebar_ul{
+	padding-top: 2px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+.nav_sidebar_ul li{
+	padding-left: 50px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 33px;
+	line-height: 33px;
+}
+.nav_sidebar_ul li:hover{
+	background-color: white;
+}
+.nav_sidebar_ul li:hover a{
+	color:black;
+}
+.nav_sidebar_ul li h3 a{
+	font-size: 12px;
+	font-weight: 100;
+	color: white;
+}
+
 .nav_loupe{
 	float: left;
 	width: 1015px;
 	height: 400px;
 	position: relative;
 }
+.nav_loupe a{
+	font-size: 12px;
+}
+.nav_loupe_person{
+	width: 200px;
+	height: 300px;
+	background-color: white;
+	position: absolute;
+	right: 30px;
+	top:50px;
+	z-index: 1;
+}
+.nav_loupe_person .headImg{
+	width: 70px;
+	height: 70px;
+	border: 5px solid rgba(0,0,0,0.1);
+	border-radius: 50%;
+	position: absolute;
+	left: 60px;
+	top: -30px;
+}
+.nav_loupe_pt{
+	width: 100%;
+	height: 155px;
+	background: url(../img/vip_bg2.png)no-repeat;
+	overflow: hidden;
+}
+.nav_loupe_pt p{
+	font-size: 12px;
+	text-align: center;
+	color: #999;
+	margin-top: 65px;
+}
+.nav_loupe_pt a{
+	margin-top: 20px;
+	display:inline-block;
+	font-size: 12px;
+	width: 70px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 10px;
+	border: 1px solid red;
+	text-align: center;
+	color: red;
+}
+.nav_loupe_pt .login{
+	margin-left: 20px;
+}
+.nav_loupe_pt .reset{
+	margin-left: 10px;
+}
+.nav_loupe_pt a:hover{
+	background-color: red;
+	color: white;
+}
+
+.nav_loupe_pm{
+	margin-left: 20px;
+	box-sizing: border-box;
+	width: 160px;
+	height: 80px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px dashed #ccc;
+}
+.nav_loupe_pm li{
+	margin-left: 1%;
+	margin-right: 2%;
+	width: 30%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.nav_loupe_pm li img{
+	margin-left: 10px;
+	margin-top: 15px;
+	width:30px;
+	height: 30px;
+}
+.nav_loupe_pm li:hover img{
+	margin-top: 10px;
+	transition: all 1s;
+}
+.nav_loupe_pm li:hover a{
+	position: absolute;
+	bottom: 13px;
+	color: red;
+}
+.nav_loupe_pb{
+	margin-left: 15px;
+}
+.nav_loupe_pb li:hover a em,.nav_loupe_pb li:hover span{
+	color: red;
+}
+
 .nav_loupe_imgs img{
 	width: 1015px;
 	height: 400px;
@@ -146,3 +270,5 @@ body{
 	background-color: white;
 	opacity: 0.5;
 }
+
+

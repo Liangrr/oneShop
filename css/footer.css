@@ -1,0 +1,45 @@
+.footer_bg{
+	width: 100%;
+	height: 450px;
+	background-color: white;
+}
+.footer{
+	height: 450px;
+	overflow:hidden;
+}
+.footer_ul{
+	margin-top: 50px;
+	border-bottom: 1px solid #ccc;
+	height: 125px;
+	overflow: hidden;
+}
+.footer_ul li{
+	margin: 0 50px;
+	width: 205px;
+	height: 66px;
+	overflow: hidden;
+}
+.footer_ul li img{
+    float: left;
+    display: block;
+    width: 66px;
+    height: 66px;
+    margin-right: 15px;
+}
+.footer_ul li b{
+	display: block;
+	margin-top: 10px;
+}
+.footer_ul li span{
+	display: inline-block;
+	width: 120px;
+	height: 20px;
+	font-size: 14px;
+	color: #ccc;
+}
+
+.footer_m dl{
+	float: left;
+	width: 195px;
+	display: block;
+}
