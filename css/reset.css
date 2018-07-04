@@ -1,19 +1,31 @@
-body,html,ul,li,dl,dt,dd,img,h1,h2,h3,h4,h5,span,p,form,a,
+/*body,html,ul,li,dl,dt,dd,img,h1,h2,h3,h4,h5,span,p,form,a,
 fieldset,select,option{
 	padding: 0;
 	margin: 0;
 	font-family: "微软雅黑";
 	color: black;
+}*/
+
+body, button, input, select, textarea {
+    font: 12px Helvetica Neue,tahoma,Arial,Verdana,"Microsoft YaHei","Hiragino Sans GB","\5b8b\4f53";
+    color: #333;
+    -webkit-font-smoothing: antialiased;
 }
-body,html,ul,li,dl,dt,dd,img,span,p,form,a,
-fieldset,select,option{
-	/*font-size: 14px;*/
+body, p, form, input, button, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
+
 a{
+	color: #333;
+	text-decoration: none;
+}
+a:hover{
 	text-decoration: none;
 }
 ul li{
-	list-style: none;
+/*	list-style: none;*/
 	float:left;
 }
 img{
