@@ -5,16 +5,44 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/shopCar.css">
 	</head>
 	<body>
-		<div id="head"></div>
+		<div class="header_bg">
+			<div class="header">
+				<a href="#"><img src="img/loginlogo.jpg" alt=""></a>
+				<div class="header_r">
+					<span>您好，欢迎光临1号店！ </span>
+					<a href="#">请登录</a>
+					<em>帮助中心</em>
+				</div>
+			</div>
+		</div>
+
+		<div class="section_bg">
+				<div class="section">
+					<div class="section_l">
+						<img src="img/offline.gif" alt="">
+					</div>
+					<div class="section_r">
+						<p>购物车还是空的呢，快去采购吧~
+							<br/>
+							或者登录查看之前加入的商品。
+						</p>
+						<div class="btn_box">
+							<a href="#">登录</a>
+							<a href="#">去逛逛</a>
+						</div>
+					</div>
+				</div>
+		</div>
 		
 		<div id="foot"></div>
 	</body>
 </html>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-	$("#head").load('index.html .loginbar');
+	// $("#head").load('index.html .loginbar');
 	$("#foot").load('index.html .footer_bg');
 </script>
 

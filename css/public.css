@@ -16,6 +16,10 @@ body{
 .loginbar a:hover{
 	color: #fe5656;
 }
+.loginbar>a>i{
+	margin-right: 5px;
+	color: #fe5656;
+}
 .loginbar .hd_unlogin{
 	float: right;
 }
