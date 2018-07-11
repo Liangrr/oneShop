@@ -6,21 +6,22 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/shopCar.css">
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_733336_hhi82gi084s.css"/>
 	</head>
 	<body>
 		<div class="header_bg">
 			<div class="header">
-				<a href="#"><img src="img/loginlogo.jpg" alt=""></a>
+				<a href="index.html"><img src="img/loginlogo.jpg" alt=""></a>
 				<div class="header_r">
 					<span>您好，欢迎光临1号店！ </span>
-					<a href="#">请登录</a>
+					<a href="login.html">请登录</a>
 					<em>帮助中心</em>
 				</div>
 			</div>
 		</div>
 
 		<div class="section_bg">
-				<div class="section">
+			<!-- <div class="section">
 					<div class="section_l">
 						<img src="img/offline.gif" alt="">
 					</div>
@@ -30,11 +31,34 @@
 							或者登录查看之前加入的商品。
 						</p>
 						<div class="btn_box">
-							<a href="#">登录</a>
-							<a href="#">去逛逛</a>
+							<a href="login.html">登录</a>
+							<a href="index.html">去逛逛</a>
 						</div>
 					</div>
+				</div> -->
+			<table class="table">
+				<thead>
+					<tr>
+						<th>商品名称</th>
+						<th>单价(元)</th>
+						<th>购买数量</th>
+						<th>小计(元)</th>
+						<th>操作</th>
+					</tr>
+					
+				</thead>
+				<tbody class="tbox">
+					<tr>
+						
+					</tr>
+				</tbody>
+			</table>
+			<div class="pays">
+				<div class="pays_main">
+					<span>合计<b></b>元</span>
+					<a href="">去结算</a>
 				</div>
+			</div>
 		</div>
 		
 		<div id="foot"></div>
@@ -42,7 +66,6 @@
 </html>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-	// $("#head").load('index.html .loginbar');
 	$("#foot").load('index.html .footer_bg');
 </script>
 

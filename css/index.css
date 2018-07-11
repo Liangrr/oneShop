@@ -1,0 +1,474 @@
+.section{
+	margin-top: 10px;
+	overflow: hidden;
+}
+.section .banner{
+	width: 100%;
+	height: 140px;
+	background-color: white;
+}
+.section .banner>img{
+	
+	height: 140px;
+}
+.banner_ul_bg{
+	float: right;
+	width: 1015px;
+	height: 140px;
+	position: relative;
+}
+#left,#right{
+	display: block;
+	width: 20px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 25px;
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	background-color: rgba(0, 0, 0, 0.3)
+}
+#left{
+	left: 10px;
+}
+#right{
+	right: 10px;
+}
+
+.banner_ul{
+	width: 3000px;	
+	height: 140px;
+}
+.banner_ul li{
+	width: 255px;
+	height: 140px;
+	position: relative;
+}
+.banner_ul li p{
+	margin-left: 10px;
+	margin-top: 20px;
+	width: 130px;
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+}
+.banner_ul li p:nth-of-type(2){
+	margin-top: 15px;
+	color: red;
+}
+.banner_ul li p:nth-of-type(3){
+	margin-top: 5px;
+}
+.banner_ul li img{
+
+	width: 110px;
+	height: 110px;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+
+
+
+.section_title1{
+	margin-top: 20px;
+	width: 100%;
+	height: 440px;
+	background-color: #F974C5;
+}
+.section_title1 .section_title1_t>a>img{
+	width:100%;
+}
+.section_title1 .section_title1_min>a>img{
+	/*display: block;*/
+    margin: 10px 1px 0 1px;
+}
+.section_title1 .section_title1_min{
+	padding-left:20px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.section_title2{
+	margin-top: 20px;
+	margin-right: 12px;
+	width: 100%;
+	height: 400px;
+}
+.section_title2 .aside_l{
+    float: left;
+    width: 267px;
+    height: 400px;
+    overflow: hidden;
+    margin-right: 12px;
+}
+.section_title2 .aside_l img{
+	display: block;
+	width: 267px;
+    height: 400px;
+}
+.section_title2 .aside_m{
+	float: left;
+    width: 484px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+    background: #fff url(../img/titke_bg.png) no-repeat center top;
+}
+
+.section_title2 .aside_m h4{
+	width: 484px;
+	height: 33px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 7px;
+    border-top: 1px solid #fb744b;
+}
+
+.section_title2 .aside_m h4 a em{
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    width: 140px;
+    margin-top: -3px;
+    font-size: 18px;
+    background: #fb6233;
+}
+.section_title2 .aside_m .aside_m_l{
+	width:250px;
+	height: 400px;
+	float: left;
+}
+.section_title2 .aside_m a img{
+    width: 250px;
+    height: 360px;
+}
+
+.section_title2 .aside_m .aside_m_r{
+	width: 250px;
+	height: 400px;
+	position: absolute;
+	right: 0px;
+}
+.a_m_r_t{
+	float: right;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 200px;
+	height: 181px;
+	border-bottom: 1px solid #ccc;
+}
+.a_m_r_t p:nth-of-type(1){
+	margin-top: 10px;
+	font-size: 18px;
+	height: 18px;
+	line-height: 18px;
+	color: #fb6233;	
+}
+.a_m_r_t p:nth-of-type(2){
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 16px;
+	height: 16px;
+}
+.section_title2 .aside_m .aside_m_r a img{
+	width: 110px;
+	height: 110px;
+	margin-left: 80px;
+}
+
+
+.section_title2 .aside_r{
+	float: right;
+    width: 445px;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+    background: #fff url(../img/titke_bg.png) no-repeat center top;
+}
+
+.section_title2 .aside_r h4{
+    width: 445px;
+	height: 33px;
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 7px;
+    border-top: 1px solid #fb744b;
+}
+
+.section_title2 .aside_r h4 a em{
+	font-style: normal;
+	font-weight: bold;
+	color: white;
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    width: 140px;
+    margin-top: -3px;
+    font-size: 18px;
+    background: #fb6233;
+}
+.aside_r .aside_m_l{
+	width:250px;
+	height: 400px;
+	float: left;
+}
+.aside_r a img{
+    width: 250px;
+    height: 360px;
+}
+
+.aside_r .aside_m_r{
+	width: 250px;
+	height: 400px;
+	position: absolute;
+	right: 0px;
+}
+.aside_r .a_m_r_t{
+	float: right;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 200px;
+	height: 181px;
+	border-bottom: 1px solid #ccc;
+}
+.aside_r .a_m_r_t p:nth-of-type(1){
+	margin-top: 10px;
+	font-size: 18px;
+	height: 18px;
+	line-height: 18px;
+	color: #fb6233;	
+}
+.aside_r .a_m_r_t p:nth-of-type(2){
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 16px;
+	height: 16px;
+}
+.section_title2 .aside_r .aside_m_r a img{
+	width: 110px;
+	height: 110px;
+	margin-left: 50px;
+}
+
+/* 第三部分 */
+.section_title3{
+	margin-top: 20px;
+	overflow: hidden;
+}
+.section_title3 .aside_l{
+	position: relative;
+    float: left;
+    width: 236px;
+	height: 400px;
+	overflow: hidden;
+    padding-top: 20px;
+	text-align: center;
+	background: linear-gradient(30deg,#f9ab57 0%,#fab775 32%,#f78a4b 100%);
+}
+.section_title3 .aside_l h4 a{
+	display: inline-block;
+    padding: 0 10px 10px 15px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 20px;
+	border-bottom: 1px solid #feeadd;
+}
+.section_title3 .aside_l>p{
+	font-family: "Century Gothic";
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+}
+.section_title3 .aside_l .floor{
+	width: 100%;
+	height: 225px;
+}
+.section_title3 .floor>ul {
+	width: 195px;
+	height: 225px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.section_title3 .floor>ul li{
+	margin-top: 20px;
+	z-index: 100;
+    width: 195px;
+	height: 225px;
+	border-radius: 10px;
+	background-color: white;
+	position: absolute;
+    left: 0px;
+	top: 0px;
+	cursor: pointer;
+}
+.section_title3 .floor ul li p{
+	height: 20px;
+	overflow: hidden;
+	font-size: 16px;
+	line-height: 20px;
+}
+.section_title3 .floor ul li p:nth-of-type(1){
+	color: #f78b4b;
+	margin-top: 20px;
+}
+.section_title3 .floor ul li p:nth-of-type(2){
+	margin-top: 10px;
+}
+
+.section_title3 .floor ul li img{
+	width: 130px;
+	height: 130px;
+	margin-top: 5px;	
+}
+.section_title3 .show_num{
+	width: 100%;
+	text-align: center;
+	padding: 20px 20px;
+    font-family: "Tahoma";
+	font-size: 14px;
+	color: #f8f6f7;
+}
+.section_title3 .comment{
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	padding: 8px 0;
+	position: relative;
+	
+	background-color: rgba(255,255,255,0.2);
+}
+.section_title3 .comment i{
+	float: left;
+	height: 100%;
+	line-height: 30px;
+	padding: 0px 20px;
+	color: white;
+	border-right: 1px solid #ccc;
+}
+.section_title3 .comment ul{
+	float: left;
+	width: 173px;
+	height:120px;
+	text-align: left;
+}
+.section_title3 .comment ul li{
+	width: 173px;
+	height: 26px;
+	line-height: 26px;
+	padding-left: 20px;
+	margin-bottom: 14px;
+}
+.section_title3 .comment ul li a{
+	color: white;
+}
+/* 第三部分的中间 */
+.section_title3 .aside_m{
+	float: left;
+	width: 744px;
+	height: 400px;
+	background-color: white;
+}
+.section_title3 .aside_m .nav_ul{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-right: 1px solid #eee;
+}
+.section_title3 .aside_m .nav_ul li{
+	float: left;
+	
+}
+.section_title3 .aside_m .nav_ul li a{
+	padding: 0 15px;
+	border-left: 1px solid #ccc;
+}
+.section_title3 .aside_m .nav_ul li:nth-of-type(1) a{
+	border: none;
+}
+
+.section_title3 .aside_m .content_ul{
+	width: 744px;
+	height: 360px;
+}
+.content_ul li{
+	width: 248px;
+	height: 180px;
+	border-right: 1px solid #eee;
+	border-top: 1px solid #eee;
+	position: relative;
+}
+.content_ul li p{
+	position: relative;
+    z-index: 105;
+    height: 24px;
+    overflow: hidden;
+    max-width: 145px;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333;
+}
+.content_ul li p:nth-of-type(2){
+	color: #f78b4b;
+}
+.content_ul li img{
+	position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 101;
+    width: 130px;
+    height: 130px;
+}
+.section_title3 .aside_r{
+	float: right;
+	width: 240px;
+	height: 400px;
+	background-color: white;
+}
+.section_title3 .aside_r h4{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 600;
+}
+.goods_ul{
+	width: 100%;
+	height: 360px;
+}
+.goods_ul li a img{
+	float: left;
+	margin-right: 10px;
+	width: 60px;
+	height: 60px;
+}
+.goods_ul li{
+	margin: 15px 20px;
+	width: 200px;
+	height: 60px;
+	
+}
+.goods_ul li p{
+	width: 200px;
+}
+.goods_ul li i{
+	display: block;
+	margin-top: 10px;
+	color: #f78b4b;
+}
+
+
+#load_more{
+	text-align: center;
+	line-height: 100px;
+	line-height: 100px;
+}

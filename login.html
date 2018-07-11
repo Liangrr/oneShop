@@ -5,22 +5,22 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/login.css">
-		<link rel="stylesheet" href="//at.alicdn.com/t/font_733336_czrt5aey1in.css">
+		<link rel="stylesheet" type="text/css"	href="//at.alicdn.com/t/font_733336_hhi82gi084s.css"/>
 	</head>
 	<body>
 		<div class="header_bg">
 			<div class="header">
-				<a href="#"><img src="img/loginlogo.jpg" alt=""></a>
+				<a href="index.html"><img src="img/loginlogo.jpg" alt=""></a>
 				<div class="header_r">
 					<span>您好，欢迎光临1号店！ </span>
-					<a href="#">请登录</a>
+					<a href="login.html">请登录</a>
 					<em>帮助中心</em>
 				</div>
 			</div>
 		</div>
 		<div class="wrap">
 			<img src="img/login2.jpg" alt="">
-			<form action="index.html" method="GET" class="login_form">
+			<form action="index.html" method="POST" class="login_form">
 				<div class="form_top">
 					<h3>1号店用户登录</h3>
 					<a href="register.html">注册新用户</a>
@@ -28,14 +28,14 @@
 				</div>
 				<div class="form_item">
 					<label>
-						<span>头像</span>
-						<input type="text" placeholder="邮箱/用户名/手机"/>
+						<span class="iconfont oneShop-zhanghao1"></span>
+						<input type="text" id="username" placeholder="邮箱/用户名/手机"/>
 					</label>
 				</div>
 				<div class="form_item">
 					<label>
-						<span>琐</span>
-						<input type="password" placeholder="密码"/>
+						<span class="iconfont oneShop-icon"></span>
+						<input type="password" id="password" placeholder="密码"/>
 					</label>
 				</div>
 				<label>
@@ -43,7 +43,7 @@
 					自动登录
 				</label>
 				<br/>
-				<button type="submit" id="loginBtn">登录</button>
+				<button type='submit' id="loginBtn">登录</button>
 				<br/>
 				<div class="more_company">
 					<a href="#">更多企业网站账号合作</a>
@@ -59,17 +59,40 @@
 			</form>
 		</div>
 		
-		<div class="footer">
-			<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;|</a>
-			<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;|</a>
-			<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;</a>
-			<br/>
-			<p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
-		</div>
+			<div class="footer">
+				<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;|</a>
+				<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;|</a>
+				<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;</a>
+				<br/>
+				<p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
+			</div>
 
 	</body>
 </html>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-	
+	var login = (function () {
+		$uName = $("#username");
+		$pwd = $("#password");
+		$sub = $('#loginBtn');
+		return {
+			init(){
+				this.event();
+			},
+			event(){
+				var _this = this;
+				$sub.on('click',function(e){
+					e = e || window.event;
+					e.preventDefault();
+					console.log($uName.val());
+					console.log($pwd.val());
+					
+					// var reg = /
+
+				});
+			}
+
+		}
+	})();
+	login.init();
 </script>

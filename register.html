@@ -5,15 +5,52 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_733336_hhi82gi084s.css"/>
 	</head>
 	<body>
-		<div id="head"></div>
+		<div class="header_bg">
+			<div class="header">
+				<a href="index.html"><img src="img/loginlogo.jpg" alt=""></a>
+				<div class="header_r">
+					<span>您好，欢迎光临1号店！ </span>
+					<a href="login.html">请登录</a>
+					<em>帮助中心</em>
+				</div>
+			</div>
+		</div>
 		
-		<div id="foot"></div>
+		<!-- 主体 表单 -->
+		<div class="section">
+			<h1>1号店注册</h1>
+			<form action="register.php" method="POST" >
+				
+				<input type="text" placeholder="用户名"/>
+				<input type="number" placeholder="手机号"/>
+				<input type="number" placeholder="短信验证码"/>
+				<button id="verify">短信验证码</button>
+				<input type="password"	placeholder="设置密码"/>
+				<input type="password"	placeholder="确认密码"/>
+				<p>点击注册,代表您同意1号店的
+					<a href="http://cms.yhd.com/cms/view.do?topicId=10">《服务协议及隐私说明》</a>
+				</p>
+				<button type="submit" id="sub">注册</button>
+			</form>
+		</div>
+		
+		<div class="footer_bg">
+			<div class="footer">
+				<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;|</a>
+				<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;|</a>
+				<a href="http://www.miibeian.gov.cn/">&nbsp;&nbsp;沪ICP备16050468号&nbsp;&nbsp;</a>
+				<br/>
+				<p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
+			</div>
+		</div>
+		
 	</body>
 </html>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
-	$("#head").load('index.html .loginbar');
-	$("#foot").load('index.html .footer_bg');
+
 </script>

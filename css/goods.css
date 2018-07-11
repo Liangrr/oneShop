@@ -150,28 +150,31 @@
     height: 580px;
     position: relative;
 }
-.mod_l .loupe_midImg{
+.mod_l .glass_midImg{
     width: 400px;
     height: 400px;
-    box-sizing: border-box;
-    padding: 20px;
+    /* padding: 20px; */
+    /* box-sizing: border-box; */
     border: 1px solid #ccc;
     margin-bottom: 25px;
     position: relative;
+    /* overflow: hidden; */
 }
-.mod_l .loupe_midImg>img{
+.mod_l .glass_midImg>img{
     width: 360px;
     height: 360px;
 }
-.loupe_min{
+.glass_min{
     width: 100px;
     height: 100px;
     background: rgba(0, 0, 0, 0.3);
+    /* display: none; */
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 999;
 }
-.loupe_bigImg{
+.glass_bigImg{
     width: 500px;
     height: 500px;
     border: 1px solid #ddd;
@@ -181,13 +184,14 @@
     left: 409px;
     overflow: hidden;
     z-index: 999;
-    display: none;
+    /* display: none; */
 }
-.loupe_bigImg>img{
-    width: 500px;
-    height: 500px;
+.glass_bigImg>img{
+    width: 720px;
+    height: 720px;
+    position: absolute;
 }
-.mod_l ul.loupe_smallImg{
+.mod_l ul.glass_smallImg{
     padding-top: 3px;
     padding-left: 40px;
     box-sizing: border-box;
@@ -195,16 +199,16 @@
     height: 60px;
     margin-bottom: 10px;
 }
-.loupe_smallImg li{
+.glass_smallImg li{
     width: 50px;
     height: 50px;
     border: 2px solid transparent;
     margin-right: 10px;
 }
-.mod_l .loupe_smallImg li.active{
+.mod_l .glass_smallImg li.active{
     border: 2px solid #999;
 }
-.loupe_smallImg li>img{
+.glass_smallImg li>img{
     width: 50px;
     height: 50px;
 }
