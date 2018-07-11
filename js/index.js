@@ -1,3 +1,4 @@
+
 var loupe = (function(){
     $loupeImgs = $('.nav_loupe_imgs');
     $loupeDots = $('.nav_loupe_ul'); 

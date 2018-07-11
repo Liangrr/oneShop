@@ -14,7 +14,7 @@
 				<a href="index.html"><img src="img/loginlogo.jpg" alt=""></a>
 				<div class="header_r">
 					<span>您好，欢迎光临1号店！ </span>
-					<a href="login.html">请登录</a>
+					<a href="login.html" id="login">请登录</a>
 					<em>帮助中心</em>
 				</div>
 			</div>
@@ -69,3 +69,41 @@
 	$("#foot").load('index.html .footer_bg');
 </script>
 
+<script>
+	var index_login = (function(){
+		$login = $('#login');
+		return {
+			init(){
+				this.events();
+				this.getData();
+			},
+			events(){
+				var _this = this;
+				
+			},
+			getData() {
+	            var _this = this;
+	            $.post('php/get_date.php',_this.cbGetData, "json");
+	        },
+	        cbGetData(json){
+//				进行判断,如果与后台信息匹配就执行
+                if(json.code == 200) {
+//	                	把用户名赋给a
+                	$login.html(json.data[0][1]);
+//	                	改变a跳转的界面
+                	$login.attr('href','person.html');
+
+//	                	浏览器加载完成后 执行刷新一次
+            	    window.onload = function(){
+					var url=document.location.href;  //获取浏览器访问栏里的地址
+					    if( url.indexOf("r=")==-1 ){    //判断地址后面是否多了某些值，没有就进方法里进行刷新
+							var t = new Date();
+			            	window.location.href = "<%=request.getContextPath()%>/url?r="+t.getTime();     
+				        }
+				    } 
+	            }
+	        }
+		}
+	})();
+	index_login.init();
+</script>
