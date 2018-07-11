@@ -356,7 +356,7 @@
     overflow: hidden;
     margin-right: 10px;
 }
-.buy span{
+.buy a{
     float: left;
     display: block;
     width: 138px;
@@ -366,6 +366,8 @@
     line-height: 48px;
     text-align: center;
     background-color: #fe5656;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .mod_r{

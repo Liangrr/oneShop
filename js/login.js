@@ -31,6 +31,7 @@
 //			回调函数
 			cbLogin(json){
 				if (json.code==200) {
+//					localStorage.userData = JSON.stringify(json.data);
 					setCookie("id", json.data.id);
 					window.location.href = 'index.html';
 				}

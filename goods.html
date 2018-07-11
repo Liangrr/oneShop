@@ -179,7 +179,7 @@
 							<span class="mod_m_span">购买</span>
 							<div class="buy">
 								<input type="text" id="modNum"/>
-								<span id="joinCar">加入购物车</span>
+								<a href="shopCar.html" id="joinCar">加入购物车</a>
 							</div>
 						</div>
 					</div>
@@ -233,8 +233,10 @@
 	var goods = (function(){
 		$login = $('.hd_login_link');
 		$register = $('#register');
-		$modNum= $('#modNum');
-		$joinCar = $('#joinCar');
+		
+		
+	    var shopList = localStorage.shopList || '[]';
+  		shopList = JSON.parse(shopList);
 		return {
 			init(){
 				this.events();
@@ -242,18 +244,32 @@
 			},
 			events(){
 				var _this = this;
-				$joinCar.on('click',function(){
+				$('#joinCar').on('click',function(){
 					var params = {
-						modNum:$modNum.val(),
-						modPrice:'29999.00',
-						modName:'dellX9'
+						id:1,
+						count:$('#modNum').val(),
+						price:'29999.00',
+						name:'dellX9'
 					}
-					$.post('php/goods.php',params,cbJoinCar,'json');
+					_this.addMod(params);
 				})
 			},
-			cbJoinCar(json){
-				
+//			这里利用localStorage存储数据
+			addMod(params){
+				var bool = true;
+				for(var i=0;i<shopList.length;i++){
+					if (params.id == shopList[i].id) {
+						bool = false;
+						shopList[i].count += params.count;
+						break;
+					}
+				}
+				if (bool) {
+					shopList.push(params);
+				}
+				localStorage.shopList = JSON.stringify(shopList);
 			},
+			
 			getData() {
 	            var _this = this;
 	            $.post('php/get_date.php',_this.cbGetData, "json");
