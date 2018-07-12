@@ -1,0 +1,27 @@
+[
+    {"id": 1, "name": "Dell X15", "price": "19999.00",
+    "img_small":"glassImg/saucer_small1.jpg",
+    "img_mid":"glassImg/saucer1.jpg",
+    "img_big":"glassImg/saucer_big1.jpg"},
+    
+    {"id": 2, "name": "Dell E9", "price": "8888.00",
+    "img_small":"glassImg/saucer_small2.jpg",
+    "img_mid":"glassImg/saucer2.jpg",
+    "img_big":"glassImg/saucer_big2.jpg"},
+    
+    {"id": 3, "name": "Dell C6", "price": "6969.00",
+    "img_small":"glassImg/saucer_small3.jpg",
+    "img_mid":"glassImg/saucer3.jpg",
+    "img_big":"glassImg/saucer_big3.jpg"},
+    
+    {"id": 4, "name": "Dell A18", "price": "9999.00",
+    "img_small":"glassImg/saucer_small4.jpg",
+    "img_mid":"glassImg/saucer4.jpg",
+    "img_big":"glassImg/saucer_big4.jpg"},
+    
+    {"id": 5, "name": "Dell B3", "price": "11880.00",
+    "img_small":"glassImg/saucer_small5.jpg",
+    "img_mid":"glassImg/saucer5.jpg",
+    "img_big":"glassImg/saucer_big5.jpg"}
+ 
+]

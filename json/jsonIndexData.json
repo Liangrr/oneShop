@@ -1,0 +1,33 @@
+[
+	{
+		"id": 1,
+		"name": "莫斯利安",
+		"describe": "光明 莫斯利安 常温酸牛奶（原味）200g*24家庭装中华老字号",
+		"price": "¥220",
+		"img": "img/banner1.jpg"
+	}, {
+		"id": 2,
+		"name": "微波炉（Weibolu）",
+		"describe": "纯生8度500ml*12听 大罐整箱装 顺滑爽口 鲜活人生（新老包装随机发货）",
+		"price": "¥330",
+		"img": "img/banner2.jpg"
+	}, {
+		"id": 3,
+		"name": "富士苹果（FushiApple）",
+		"describe": "光明 莫斯利安 常温酸牛奶（原味）200g*24家庭装中华老字号",
+		"price": "¥64",
+		"img": "img/banner3.jpg"
+	}, {
+		"id": 4,
+		"name": "可口可乐（Cole）",
+		"describe": "纯生8度500ml*12听 大罐整箱装 顺滑爽口 鲜活人生（新老包装随机发货）",
+		"price": "¥38",
+		"img": "img/banner4.jpg"
+	}, {
+		"id": 5,
+		"name": "青岛啤酒（Tsingtao）",
+		"describe": "纯生8度500ml*12听 大罐整箱装 顺滑爽口 鲜活人生（新老包装随机发货）",
+		"price": "¥64",
+		"img": "img/banner5.jpg"
+	}
+]

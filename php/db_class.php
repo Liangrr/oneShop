@@ -5,7 +5,7 @@
     	public $ip = 'localhost';
     	public $username = 'root';
     	public $pwd = '';
-    	public $db = 'oneshop';
+    	public $db = 'db_oneshop';
     	public $port = '3306';
     	
     	public function  query($sql,$type=1){

@@ -1,9 +1,3 @@
-//	采用克隆
-	$banner_ul = $(".section .banner .banner_ul");
-	$banner_ul_li = $(".section .banner .banner_ul li");
-	for (var i=0;i<10;i++) {
-		$banner_ul_li.clone().prependTo($banner_ul);
-	}
 
 var loupe = (function(){
 //	获取登录,注册按钮
@@ -14,13 +8,17 @@ var loupe = (function(){
     $loupeDots = $('.nav_loupe_ul'); 
 //  定时器
 	var timer = null;
+//	获取广告条
+	$banner_ul = $('.section .banner .banner_ul_bg .banner_ul');
 	
     return{
 //  	初始化函数
         init(){
+   		
             this.event();
             this.autoPlay();
             this.getData();
+            console.log($)
         },
 //      事件函数
         event(){
@@ -36,13 +34,35 @@ var loupe = (function(){
 //      从sessionStorage获取存的值
         getData() {
             var _this = this;
+
+            if (sessionStorage.hasOwnProperty("userData")) {
 //	           	从sessionStorage获取数据然后转为对象
-            $login.html(JSON.parse(sessionStorage.userData).username);
+	            $login.html(JSON.parse(sessionStorage.userData).username);
 //				改变a跳转的界面
-        	$login.attr('href','person.html');
+	        	$login.attr('href','person.html');
 //				登陆后,删除注册按钮
-        	$register.remove();
+	        	$register.remove();            	
+            }
+
+//      	请求json数据,进行渲染
+        	$.get('json/jsonIndexData.json',this.insertData,'json');
         },
+//      json数据进行渲染
+		insertData(json){
+			var arr = [];
+			for (var i=0;i<json.length;i++) {
+				var _li = `<li id="${json[i].id}">
+				<a href="goods.html">
+				<p>${json[i].describe}</p>
+				<p>${json[i].price}</p>
+				<p>${json[i].name}</p>
+				<img src='${json[i].img}'/>
+				</a>
+				</li>`;
+				arr.push(_li);
+			}
+			$banner_ul.html(arr.join(''));
+		},
 //      轮播图展示图片函数
         showImg(index){
 //      	点击圆点时给点击的加class,其它清空
