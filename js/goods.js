@@ -1,3 +1,6 @@
+
+	
+	
 var glass = (function(){
 	// glass_small,glass,glass_big分别代表小中大		
 		return {
@@ -21,11 +24,12 @@ var glass = (function(){
 					e = e || window.event;
 					var bor = document.querySelector('.glass_midImg');
 					var gm = document.querySelector('.glass_min');
-					var l = e.clientX - bor.offsetLeft - gm.offsetWidth/2;
-					var t = e.clientY - bor.offsetTop - gm.offsetHeight/2;
+					var l = e.clientX - gm.offsetWidth/2;
+					var t = e.clientY - gm.offsetHeight/2;
+//					这里差个距离左边和顶端的距离bug
 					var maxL = bor.clientWidth - gm.offsetWidth;
 					var maxT = bor.clientHeight - gm.offsetHeight;
-			
+					
 					l = (l>maxL?maxL:(l<0?0:l));
 					t = (t>maxT?maxT:(t<0?0:t));
 					
@@ -35,6 +39,7 @@ var glass = (function(){
 					$('.glass_bigImg img').css({left:-2*l});
 					$('.glass_bigImg img').css({top:-2*t});
 				});
+
 			},
 			magnify(index){
 				var saucer = `glassImg/saucer${index+1}.jpg`;

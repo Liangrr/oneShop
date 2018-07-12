@@ -55,7 +55,7 @@
 			</table>
 			<div class="pays">
 				<div class="pays_main">
-					<span>合计<b></b>元</span>
+					<span>合计<b id="total"></b>元</span>
 					<a href="">去结算</a>
 				</div>
 			</div>
@@ -68,84 +68,7 @@
 <script type="text/javascript">
 	$("#foot").load('index.html .footer_bg');
 </script>
-
+<script src="js/shopCar.js" type="text/javascript" charset="utf-8"></script>
 <script>
-	var shopCar = (function(){
-		$login = $('#login');
-		$tbox = $('.tbox');
-		var shopList = localStorage.shopList || '[]';
-   		shopList = JSON.parse(shopList);
-		return {
-			init(){
-				this.events();
-				this.getData();
-				this.showMod(shopList);
-			},
-//			展示数据,商品跳转时将信息加载到localStorage
-//			现在从localStorage中获取信息
-			showMod(data){
-				var str = []
-	            for(var i = 0; i < data.length; i++) {
-	                var li = `<tr id="${data.id}">
-	                            <td>${data[i].name}</td>
-	                            <td>${data[i].price}</td>
-	                            <td><input type='number' value='${data[i].count}' />
-	                            
-	                            </td>
-	                            <td>${data[i].price*data[i].count}</td>
-	                            <td><button class='btn btn-danger del-btn'>删除</button></td>
-	                            </tr>`;
-	                str.push(li);
-	            }
-	            $tbox.html(str.join(''));
-			},
-	        //  事件函数
-	        events() {
-	            var _this = this;
-	            $tbox.on('change', 'input', function() {
-	                // 获取此tr
-	                var tr = $(this).closest('tr');
-	                // 获取文本值(商品更新后的数据)
-	                var val = $(this).val();
-	                // 修改对应数据
-	                shopList[tr.index()].count = val;
-	                // 存入本地数据库
-	                localStorage.shopList = JSON.stringify(shopList);
-	                _this.showMod(JSON.parse(localStorage.shopList));
-	            })
-	            $tbox.on('click', '.del-btn', function() {
-	               var tr = $(this).closest('tr');
-	               // 删除数组中对应的数据
-	               shopList.splice(tr.index(), 1);
-	               // 存入到本地数据库
-	               localStorage.shopList = JSON.stringify(shopList);
-	               // 移出dom元素
-	               tr.remove()
-	            })
-	        },
-			getData() {
-	            var _this = this;
-	            $.post('php/get_date.php',_this.cbGetData, "json");
-	        },
-	        cbGetData(json){
-//				进行判断,如果与后台信息匹配就执行
-                if(json.code == 200) {
-//	                	把用户名赋给a
-                	$login.html(json.data[0][1]);
-//	                	改变a跳转的界面
-                	$login.attr('href','person.html');
 
-//	                	浏览器加载完成后 执行刷新一次
-            	    window.onload = function(){
-					var url=document.location.href;  //获取浏览器访问栏里的地址
-					    if( url.indexOf("r=")==-1 ){    //判断地址后面是否多了某些值，没有就进方法里进行刷新
-							var t = new Date();
-			            	window.location.href = "<%=request.getContextPath()%>/url?r="+t.getTime();     
-				        }
-				    } 
-	            }
-	        }
-		}
-	})();
-	shopCar.init();
 </script>

@@ -15,7 +15,7 @@
 			<div class="hd_unlogin">
 				<span class="hd_hi">Hi,</span>
 				<a href="login.html" class="hd_login_link">请登录</a>
-				<a href="register.html">注册</a>
+				<a href="register.html" id="register">注册</a>
 				<ul>
 					<li><a href="#"><i class="iconfont oneShop-dingdan"></i>我的订单</a></li>
 					<li><a href="#"><i class="iconfont oneShop-niunai"></i>客户服务</a></li>
@@ -227,13 +227,10 @@
 </script>
 <script src="js/goods.js"></script>
 
-
-<script>
-	
-	var goods = (function(){
+<script type="text/javascript">
+		var goods = (function(){
 		$login = $('.hd_login_link');
 		$register = $('#register');
-		
 		
 	    var shopList = localStorage.shopList || '[]';
   		shopList = JSON.parse(shopList);
@@ -269,32 +266,19 @@
 				}
 				localStorage.shopList = JSON.stringify(shopList);
 			},
-			
 			getData() {
 	            var _this = this;
-	            $.post('php/get_date.php',_this.cbGetData, "json");
-	        },
-	        cbGetData(json){
-//				进行判断,如果与后台信息匹配就执行
-                if(json.code == 200) {
-//	                	把用户名赋给a
-                	$login.html(json.data[0][1]);
-//	                	改变a跳转的界面
-                	$login.attr('href','person.html');
-//	                	登陆后,删除注册按钮
-                	$register.remove();
-//	                	浏览器加载完成后 执行刷新一次
-            	    window.onload = function(){
-					var url=document.location.href;  //获取浏览器访问栏里的地址
-					    if( url.indexOf("r=")==-1 ){    //判断地址后面是否多了某些值，没有就进方法里进行刷新
-							var t = new Date();
-			            	window.location.href = "<%=request.getContextPath()%>/url?r="+t.getTime();     
-				        }
-				    } 
-	            }
-	        }
+	            sessionStorage.userData = sessionStorage.userData || {};
+//	           	从sessionStorage获取数据然后转为对象
+	            $login.html(JSON.parse(sessionStorage.userData).username);
+//				改变a跳转的界面
+            	$login.attr('href','person.html');
+//				登陆后,删除注册按钮
+            	$register.remove();
+	       }
+
 		}
 	})();
 	goods.init();
-
 </script>
+

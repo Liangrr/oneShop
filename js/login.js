@@ -31,8 +31,9 @@
 //			回调函数
 			cbLogin(json){
 				if (json.code==200) {
-//					localStorage.userData = JSON.stringify(json.data);
-					setCookie("id", json.data.id);
+//					把获取的账号信息存到sessionStorage不需要永久保存仅仅一次会话  所以用session
+					sessionStorage.userData = JSON.stringify(json.data);
+//					跳转到主页
 					window.location.href = 'index.html';
 				}
 			}

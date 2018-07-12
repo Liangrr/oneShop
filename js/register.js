@@ -13,12 +13,13 @@
 			},
 			events(){
 				var _this = this;
-//				var reg = /^[a-zA-Z]+\w+$/g;
-//				var regpwd = /^\w{2,15}$/g;
-//				var regphone = /^1[3,5,7,8,9]\d{9}$/g;
-				
+				var reg = /^[a-zA-Z]+\w+$/g;
+				var regpwd = /^\w{2,15}$/g;
+				var regphone = /^1[3,5,7,8,9]\d{9}$/g;
+				var ranSix = ranSixNumLet();
+				$code.html(ranSix);
 				$sub.on('click',function(e){
-					var ranSix = ranSixNumLet();
+					
 					e.preventDefault();
 //					if (!reg.test($uName.val())) {
 //						alert('您输入的账号有误！请重新输入！');
