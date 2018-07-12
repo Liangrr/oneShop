@@ -14,11 +14,9 @@ var loupe = (function(){
     return{
 //  	初始化函数
         init(){
-   		
             this.event();
             this.autoPlay();
             this.getData();
-            console.log($)
         },
 //      事件函数
         event(){
