@@ -61,10 +61,14 @@
 	        },
 			getData() {
 	            var _this = this;
-//	           	从sessionStorage获取数据然后转为对象
-	            $login.html(JSON.parse(sessionStorage.userData).username);
-//				改变a跳转的界面
-            	$login.attr('href','person.html');
+//				判断是否存在userData,存在则更新用户
+            	if (sessionStorage.hasOwnProperty("userData")) {
+	//	           	从sessionStorage获取数据然后转为对象
+		            $login.html(JSON.parse(sessionStorage.userData).username);
+	//				改变a跳转的界面
+		        	$login.attr('href','person.html');     	
+           		}
+            	
 	       }
 		}
 	})();
