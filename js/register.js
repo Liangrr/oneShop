@@ -55,7 +55,6 @@
 								$('.tips').children('b').eq(5).attr('class',txt_r);
 							}
 						}else{
-							console.log($(this).index())
 //							这个判断是除第二个和最后一个,其他input进行判断 且正确 执行的
 							$('.tips').children('b').eq($(this).index()).attr('class',txt_g);							
 						}
@@ -63,10 +62,6 @@
 //						这个判断是除第二个和最后一个,,其他input进行判断 且错误 执行的
 						$('.tips').children('b').eq($(this).index()).attr('class',txt_r);
 					}
-				});
-				
-				$('body').on('mousemove',function(){
-
 				});
 				
 				$code.on('click',function(e){
@@ -77,13 +72,31 @@
 				
 				$sub.on('click',function(e){
 					e.preventDefault();
+					
+					$inp0 = $('form').children('input').eq(0);
+					$inp1 = $('form').children('input').eq(1);
+					$inp2 = $('form').children('input').eq(2);
+					$inp3 = $('form').children('input').eq(3);
+					$inp4 = $('form').children('input').eq(4);
+//					判断值是否正确
+					if(eval($inp0.attr('pattern')).test($inp0.val())
+					&&eval($inp1.attr('pattern')).test($inp1.val())
+					&&eval($inp2.attr('pattern')).test($inp2.val())
+					&&$inp2.val()==ranSix
+					&&eval($inp3.attr('pattern')).test($inp3.val())
+					&&eval($inp4.attr('pattern')).test($inp4.val())
+					&&($inp3.val()==$inp4.val())){
+						
 						var params = {
 							username:$('#uName').val(),
 							password:$('#pwd').val(),
 							phone:$('#phone').val()
 						}
 						$.post('php/register.php',params,_this.cbRegister,'json');
-
+					}else{
+						alert('注册信息有错！')
+						return;
+					}
 				})
 			},
 			cbRegister(json){
