@@ -21,8 +21,10 @@
 	                var li = `<tr id="${data.id}">
 	                            <td>${data[i].name}</td>
 	                            <td>${data[i].price}</td>
-	                            <td><input type='number' value='${data[i].count}' />
-	                            
+	                            <td>
+	                            	<button class='iconfont oneShop-jiansvg'></button>
+	                            	<input type='text' value='${data[i].count}' />
+	                            	<button class='iconfont oneShop-jia'></button>
 	                            </td>
 	                            <td>${data[i].price*data[i].count}</td>
 	                            <td><button class='btn btn-danger del-btn'>删除</button></td>
